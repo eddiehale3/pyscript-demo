@@ -14,6 +14,14 @@ html {
   box-sizing: inherit;
 }
 
+.header-table-left {
+  text-align: left
+}
+
+.header-table-right {
+  text-align: right
+}
+
 .column {
   float: left;
   width: 33.3%;

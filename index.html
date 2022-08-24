@@ -24,8 +24,8 @@
       <h2>Master of Information Systems</h2>
       <table style="text-align: left">
         <tr>
-          <td>Current Date and Time:</td>
-          <td>
+          <td class="header-table-left">Current Date and Time:</td>
+          <td class="header-table-right">
             <py-script>
               from app import get_current_time
               print(get_current_time())
@@ -33,8 +33,8 @@
           </td>
         </tr>
         <tr>
-          <td>Current temperature:</td>
-          <td>
+          <td class="header-table-left">Current temperature:</td>
+          <td class="header-table-right">
             <py-script>
               from pyodide.http import pyfetch
               import asyncio
