@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- HTML Codes by Quackit.com -->
+  <title>Instructors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <py-env>
+    - paths:
+      - app.py
+  </py-env>
+</head>
+
+<body>
+  <div class="about-section">
+    <div class="about-image">
+      <img src="https://storage.googleapis.com/pyscript-test-bucket/images/walton_logo.png" style="width:100%">
+    </div>
+    <div class="about-text">
+      <h1>ISYS 5423 - Seminar in Systems Development</h1>
+      <h2>Master of Information Systems</h2>
+      <table>
+        <tr>
+          <td>Current Date and Time:</td>
+          <td>
+            <py-script>
+              from app import get_current_time
+              print(get_current_time())
+            </py-script>  
+          </td>
+        </tr>
+        <tr>
+          <td>Current temperature:</td>
+          <td>
+            <py-script>
+              from pyodide.http import pyfetch
+              import asyncio
+              from app import convert_to_fahrenheit
+  
+              <!-- https://open-meteo.com/en -->
+              response = await pyfetch(url="https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=36.06&longitude=-94.17&temperature_unit=fahrenheit", method="GET")
+              body = await response.json()
+  
+              temp = body['current_weather']['temperature']
+
+              if response.status > 200:
+                print(f'Error')
+              else:
+                print(f'{temp} F')
+            </py-script>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <!-- <h1 style="text-align:center">Instructors</h1> -->
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="https://storage.googleapis.com/pyscript-test-bucket/images/michael.jpeg" alt="Michael" style="width:100%">
+        <div class="container">
+          <h2>Michael Dereszynski</h2>
+          <p class="title">Instructor</p>
+          <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>jane@example.com</p> -->
+          <p><button class="button" onclick="window.location.href='michael.html'">About</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="https://storage.googleapis.com/pyscript-test-bucket/images/eddie.jpeg" alt="Eddie" style="width:100%">
+        <div class="container">
+          <h2>Eddie Hale</h2>
+          <p class="title">Executive in Residence</p>
+          <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>mike@example.com</p> -->
+          <p><button class="button" onclick="window.location.href='eddie.html'">About</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <!-- <p>Questions? Leave us a message:</p> -->
+    </div>
+    <div class="row">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+          <!-- <input type="submit" value="Submit"> -->
+        </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
