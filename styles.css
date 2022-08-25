@@ -14,6 +14,13 @@ html {
   box-sizing: inherit;
 }
 
+table.header-center {
+  table-layout: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
