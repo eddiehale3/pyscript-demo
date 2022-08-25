@@ -19,6 +19,7 @@ table.header-center {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 16pt;
 }
 
 .center {
@@ -127,6 +128,18 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
   background-color: #45a049;
 }
 
