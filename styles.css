@@ -158,13 +158,6 @@ button:hover {
   padding: 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column, input[type=submit] {
@@ -172,3 +165,112 @@ button:hover {
     margin-top: 0;
   }
 } 
+
+/* Profile Card */
+
+.profile-body {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+a {
+  color: #f96332;
+}
+.m-t-5{
+  margin-top: 5px;   
+}
+.profile-card {
+  background: #fff;
+  transition: .5s;
+  border: 0;
+  border-radius: .1875rem;
+  /* display: inline-block; */
+  /* position: relative; */
+  width: 60%;
+  overflow: auto;
+  margin: auto;
+}
+.profile-card .body {
+  font-size: 20px;
+  color: #424242;
+  padding: 20px;
+  font-weight: 400;
+}
+.profile-page .profile-header {
+  position: relative;
+}
+
+.profile-page .profile-header .profile-image img {
+  border-radius: 50%;
+  width: 300px;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+.profile-page .profile-header .social-icon a {
+  margin: 0 5px
+}
+
+.profile-page .profile-sub-header {
+  min-height: 60px;
+  width: 100%
+}
+
+.profile-page .profile-sub-header ul.box-list {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
+  background: #eee
+}
+
+.profile-page .profile-sub-header ul.box-list li {
+  border-right: 1px solid #e0e0e0;
+  display: table-cell;
+  list-style: none
+}
+
+.profile-page .profile-sub-header ul.box-list li:last-child {
+  border-right: none
+}
+
+.profile-page .profile-sub-header ul.box-list li a {
+  display: block;
+  padding: 15px 0;
+  color: #424242
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #A22134;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.profile-button:hover {
+  background-color: #555;
+}
+
+.job_post {
+  font-size: large;
+}

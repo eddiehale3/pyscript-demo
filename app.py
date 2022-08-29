@@ -1,3 +1,9 @@
+# from js import document, localStorage, Object
+from js import (
+  document,
+  console,
+  alert
+)
 from datetime import datetime
 import smtplib
 from email.mime.text import MIMEText
@@ -28,7 +34,7 @@ def send_email(first, last, subject, message):
 
   # Send the message via our own SMTP server, but don't include the
   # envelope header.
-  s = smtplib.SMTP('localhost')
+  s = smtplib.SMTP('localhost', 25)
   s.sendmail(me, [you], msg.as_string())
   s.quit()
 
