@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- HTML Codes by Quackit.com -->
   <title>Instructors</title>
@@ -9,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <py-env>
     - paths:
-      - app.py
+    - app.py
   </py-env>
 </head>
 
@@ -31,7 +32,7 @@
             <py-script>
               from app import get_current_time
               print(get_current_time())
-            </py-script>  
+            </py-script>
           </td>
         </tr>
         <tr>
@@ -41,24 +42,32 @@
               from pyodide.http import pyfetch
               import asyncio
               from app import convert_to_fahrenheit
-  
+
               <!-- https://open-meteo.com/en -->
-              response = await pyfetch(url="https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=36.06&longitude=-94.17&temperature_unit=fahrenheit", method="GET")
+              response = await
+              pyfetch(url="https://api.open-meteo.com/v1/forecast?current_weather=true&latitude=36.06&longitude=-94.17&temperature_unit=fahrenheit",
+              method="GET")
               body = await response.json()
-  
+
               temp = body['current_weather']['temperature']
 
               if response.status > 200:
-                print(f'Error')
+              print(f'Error')
               else:
-                print(f'{temp} F')
+              print(f'{temp} F')
             </py-script>
           </td>
         </tr>
+        <tr></tr>
+        <!-- Remove this part!! -->
+        <tr>
+          <td>Remove me!!</td>
+        </tr>
+        <!-- End remove section -->
       </table>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="column">
       <div class="card">
@@ -66,7 +75,8 @@
         <div class="container">
           <h2>Michael Dereszynski</h2>
           <p class="title">Instructor</p>
-          <p><button class="button" onclick="document.getElementById('michael-profile').style.display='block'">About</button></p>
+          <p><button class="button"
+              onclick="document.getElementById('michael-profile').style.display='block'">About</button></p>
         </div>
       </div>
     </div>
@@ -76,7 +86,8 @@
         <div class="container">
           <h2>Eddie Hale</h2>
           <p class="title">Executive in Residence</p>
-          <p><button class="button" onclick="document.getElementById('eddie-profile').style.display='block'">About</button></p>
+          <p><button class="button"
+              onclick="document.getElementById('eddie-profile').style.display='block'">About</button></p>
         </div>
       </div>
     </div>
@@ -86,32 +97,45 @@
     <div class="profile-page">
       <div class="col-xl-6 col-lg-7 col-md-12">
         <div class="profile-card profile-header">
-            <div class="body">
-                <div class="row" style="display: flex;">
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="profile-image float-md-right"> <img src="./images/michael.jpeg" alt=""> </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-12" style="padding-left: 20px;font-size: xx-large; margin-top: 30px;">
-                        <h4 class="m-t-0 m-b-0"><strong>Michael</strong> Dereszynski</h4>
-                        <span class="job_post">Instructor and Associate Director at University of Arkansas - Sam M. Walton College of Business</span>
-                        <p class="job_post">
-                        <a href="mailto:mdereszynski@walton.uark.edu">mdereszynski@walton.uark.edu</a>
-                        </p>
-                        <p class="social-icon m-t-5 m-b-0">
-                            <a title="LinkedIn" href="https://www.linkedin.com/in/mlderes/" target="_blank" rel="noreferrer noopener"><i class="fa fa-linkedin "></i></a>
-                        </p>
-                    </div>                
-                </div>
-                <div class="row">
-                  <p>
-                    Michael is sharing his experiences and helping students and professionals to enhance their IT skills as an instructor and advisor in the graduate programs at the Walton College of Business. Michael's deep technical experience, strong architecture and project leadership experience combined with proven sales acumen has created a successful leader in the IT industry and now his focus shifts to sharing that experience with others.
-                  </p>  
-                  <p>
-                    It is his desire that the years spent learning from others, leading teams through complex sales negotiations and difficult projects will translate into a high value learning experience for both undergrads and graduate students alike. Michael has always been of “learn-it-all” mentality, constantly looking for the next challenge. Through his career so far, he has had roles spanning from the deeply technical to systems administration, systems architecture, software development, and sales leadership. Each role has added a new perspective and appreciation for the challenges of IT and the needs of executives that use technology to drive business decisions.
-                  </p>
-                </div>
-                <button id="close" value="Close" onclick="document.getElementById('michael-profile').style.display='none'" class="button">Close</button>
-            </div>                    
+          <div class="body">
+            <div class="row" style="display: flex;">
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="profile-image float-md-right"> <img src="./images/michael.jpeg" alt=""> </div>
+              </div>
+              <div class="col-lg-8 col-md-8 col-12" style="padding-left: 20px;font-size: xx-large; margin-top: 30px;">
+                <h4 class="m-t-0 m-b-0"><strong>Michael</strong> Dereszynski</h4>
+                <span class="job_post">Instructor and Associate Director at University of Arkansas - Sam M. Walton
+                  College of Business</span>
+                <p class="job_post">
+                  <a href="mailto:mdereszynski@walton.uark.edu">mdereszynski@walton.uark.edu</a>
+                </p>
+                <p class="social-icon m-t-5 m-b-0">
+                  <a title="LinkedIn" href="https://www.linkedin.com/in/mlderes/" target="_blank"
+                    rel="noreferrer noopener"><i class="fa fa-linkedin "></i></a>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                Michael is sharing his experiences and helping students and professionals to enhance their IT skills as
+                an instructor and advisor in the graduate programs at the Walton College of Business. Michael's deep
+                technical experience, strong architecture and project leadership experience combined with proven sales
+                acumen has created a successful leader in the IT industry and now his focus shifts to sharing that
+                experience with others.
+              </p>
+              <p>
+                It is his desire that the years spent learning from others, leading teams through complex sales
+                negotiations and difficult projects will translate into a high value learning experience for both
+                undergrads and graduate students alike. Michael has always been of “learn-it-all” mentality, constantly
+                looking for the next challenge. Through his career so far, he has had roles spanning from the deeply
+                technical to systems administration, systems architecture, software development, and sales leadership.
+                Each role has added a new perspective and appreciation for the challenges of IT and the needs of
+                executives that use technology to drive business decisions.
+              </p>
+            </div>
+            <button id="close" value="Close" onclick="document.getElementById('michael-profile').style.display='none'"
+              class="button">Close</button>
+          </div>
         </div>
       </div>
     </div>
@@ -121,33 +145,39 @@
     <div class="profile-page">
       <div class="col-xl-6 col-lg-7 col-md-12">
         <div class="profile-card profile-header">
-            <div class="body">
-                <div class="row" style="display: flex;">
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="profile-image float-md-right"> <img src="./images/eddie.jpg" alt=""> </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-12" style="padding-left: 20px;font-size: xx-large; margin-top: 30px;">
-                        <h4 class="m-t-0 m-b-0"><strong>Eddie</strong> Hale</h4>
-                        <span class="job_post">Executive in Residence | Senior SRE | Multi-Cloud Certified Architect</span>
-                        <p class="job_post">
-                        <a href="mailto:eddieh@uark.edu">eddieh@uark.edu</a>
-                        </p>
-                        <p class="social-icon m-t-5 m-b-0">
-                            <a title="LinkedIn" href="https://www.linkedin.com/in/eddie-hale-a995a0a6/" target="_blank" rel="noreferrer noopener"><i class="fa fa-linkedin "></i></a>
-                        </p>
-                    </div>                
-                </div>
-                <div class="row">
-                  <p>
-                    Eddie is a Staff Software Engineer - Site Reliability Engineer at Walmart who is responsible for the availability and reliability of critical platform services and applications, ensuring they meet the requirements of internal and external users. 
-                    Eddie believes that multi-cloud is the future and strives to engineer products without vendor lock-in. Eddie holds multiple certifications in both Amazon Web Services and Google Cloud Platform. He holds both a Bachelor's in Computer Science and Masters in Information Systems from the University of Arkansas. 
-                  </p>
-                  <p>
-                    Outside of work Eddie enjoys woodworking, golfing, and spending time with his three dogs. 
-                  </p>
-                </div>
-                <button id="close" value="Close" onclick="document.getElementById('eddie-profile').style.display='none'" class="button">Close</button>
-            </div>                    
+          <div class="body">
+            <div class="row" style="display: flex;">
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="profile-image float-md-right"> <img src="./images/eddie.jpg" alt=""> </div>
+              </div>
+              <div class="col-lg-8 col-md-8 col-12" style="padding-left: 20px;font-size: xx-large; margin-top: 30px;">
+                <h4 class="m-t-0 m-b-0"><strong>Eddie</strong> Hale</h4>
+                <span class="job_post">Executive in Residence | Senior SRE | Multi-Cloud Certified Architect</span>
+                <p class="job_post">
+                  <a href="mailto:eddieh@uark.edu">eddieh@uark.edu</a>
+                </p>
+                <p class="social-icon m-t-5 m-b-0">
+                  <a title="LinkedIn" href="https://www.linkedin.com/in/eddie-hale-a995a0a6/" target="_blank"
+                    rel="noreferrer noopener"><i class="fa fa-linkedin "></i></a>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                Eddie is a Staff Software Engineer - Site Reliability Engineer at Walmart who is responsible for the
+                availability and reliability of critical platform services and applications, ensuring they meet the
+                requirements of internal and external users.
+                Eddie believes that multi-cloud is the future and strives to engineer products without vendor lock-in.
+                Eddie holds multiple certifications in both Amazon Web Services and Google Cloud Platform. He holds both
+                a Bachelor's in Computer Science and Masters in Information Systems from the University of Arkansas.
+              </p>
+              <p>
+                Outside of work Eddie enjoys woodworking, golfing, and spending time with his three dogs.
+              </p>
+            </div>
+            <button id="close" value="Close" onclick="document.getElementById('eddie-profile').style.display='none'"
+              class="button">Close</button>
+          </div>
         </div>
       </div>
     </div>
@@ -170,37 +200,37 @@
     </div>
     <py-script style="display: none;">
       from js import(
-        document,
-        console,
-        alert
+      document,
+      console,
+      alert
       )
       from app import send_email
 
       def form_function(*args, **kwargs):
-        fname = document.getElementById("fname").value
-        lname = document.getElementById("lname").value
-        subject = document.getElementById("subject").value
-        message = document.getElementById("message").value
+      fname = document.getElementById("fname").value
+      lname = document.getElementById("lname").value
+      subject = document.getElementById("subject").value
+      message = document.getElementById("message").value
 
-        try:
-          if not fname or not lname or not subject or not message: 
-            alert('All fields are required')
-          else:
-            console.log(f'fname: {fname}')
-            console.log(f'lname: {lname}')
-            console.log(f'subject: {subject}')
-            console.log(f'message: {message}')
-            alert('Message Sent!')
-            <!-- submit = document.getElementById("submit") -->
-            <!-- submit.addEventListener("click", send_email(fname, lname, subject, message)) -->
+      try:
+      if not fname or not lname or not subject or not message:
+      alert('All fields are required')
+      else:
+      console.log(f'fname: {fname}')
+      console.log(f'lname: {lname}')
+      console.log(f'subject: {subject}')
+      console.log(f'message: {message}')
+      alert('Message Sent!')
+      <!-- submit = document.getElementById("submit") -->
+      <!-- submit.addEventListener("click", send_email(fname, lname, subject, message)) -->
 
-            # clear form
-            document.getElementById("fname").value = ""
-            document.getElementById("lname").value = ""
-            document.getElementById("subject").value = ""
-            document.getElementById("message").value = ""
-        except:
-          alert('An error occurred sending message')
+      # clear form
+      document.getElementById("fname").value = ""
+      document.getElementById("lname").value = ""
+      document.getElementById("subject").value = ""
+      document.getElementById("message").value = ""
+      except:
+      alert('An error occurred sending message')
 
     </py-script>
   </div>
@@ -208,19 +238,19 @@
     // Get the modal
     var modal = document.getElementById('eddie-profile');
     var modal2 = document.getElementById('michael-profile');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
 
-        if(event.target == modal2) {
-          modal2.style.display = "none"; 
-        }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
     }
-    </script>
+  </script>
   <!-- Adding random comment -->
 </body>
-</html>
 
+</html>
