@@ -19,19 +19,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # Add steps here!!
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Htmlproofer
+        uses: athackst/htmlproofer-action@main
         with:
-          node-version: "20"
-      - name: Install HTMLHint and stylelint
-        run: |
-          npm install -g htmlhint stylelint stylelint-config-standard
-      - name: Lint HTML files
-        run: |
-          htmlhint "**/*.html" || exit 0
-        continue-on-error: true
-      - name: Lint CSS files
-        run: |
-          stylelint "**/*.css" --custom-formatter=stylelint-actions-formatters || exit 0
-        continue-on-error: true
+          directory: ./
+      - name: stylelint
+        uses: actions-hub/stylelint@master
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: "20"
+      # - name: Install HTMLHint and stylelint
+      #   run: |
+      #     npm install -g htmlhint stylelint stylelint-config-standard
+      # - name: Lint HTML files
+      #   run: |
+      #     htmlhint "**/*.html" || exit 0
+      #   continue-on-error: true
+      # - name: Lint CSS files
+      #   run: |
+      #     stylelint "**/*.css" --custom-formatter=stylelint-actions-formatters || exit 0
+      #   continue-on-error: true
       # End additional steps!!
