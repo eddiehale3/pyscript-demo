@@ -43,7 +43,7 @@ jobs:
           sed -i "s|{{QR_CODE}}|$QR_URL|g" index.html
           # output html to double check
           echo "Check qr was replaced"
-          cat index.html
+          pwd
       # End additional steps!!
       - name: Setup Pages
         uses: actions/configure-pages@v5
