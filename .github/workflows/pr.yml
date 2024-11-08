@@ -1,0 +1,37 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: GitHub Actions PR Workflow
+
+on:
+  # Runs on pull requests to main branch
+  pull_request:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Add additional jobs here!!
+
+  # End additional job steps!!
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Add steps here!!
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - name: Install HTMLHint and stylelint
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard
+      - name: Lint HTML files
+        run: |
+          htmlhint "**/*.html" || exit 0
+        continue-on-error: true
+      - name: Lint CSS files
+        run: |
+          stylelint "**/*.css" --formatter github || exit 0
+        continue-on-error: true
+      # End additional steps!!
