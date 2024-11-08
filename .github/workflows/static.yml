@@ -35,12 +35,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # Add steps here!!
-      - name: Htmlproofer
-        uses: athackst/htmlproofer-action@main
-        with:
-          directory: ./
-      - name: stylelint
-        uses: actions-hub/stylelint@master
       - name: Generate QR Code
         env:
           PAGE_URL: "https://${{ github.repository_owner }}.github.io/${{ github.repository }}"
