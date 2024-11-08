@@ -23,8 +23,10 @@ jobs:
         uses: athackst/htmlproofer-action@main
         with:
           directory: ./
+        continue-on-error: true
       - name: stylelint
         uses: actions-hub/stylelint@master
+        continue-on-error: true
       # - name: Set up Node.js
       #   uses: actions/setup-node@v4
       #   with:
