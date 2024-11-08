@@ -40,7 +40,10 @@ jobs:
           PAGE_URL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
         run: |
           QR_URL="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$PAGE_URL"
-          sed -i "s|{{QR_CODE}}|$QR_URL|" index.html
+          sed -i "s|{{QR_CODE}}|$QR_URL|g" index.html
+          # output html to double check
+          echo "Check qr was replaced"
+          cat index.html
       # End additional steps!!
       - name: Setup Pages
         uses: actions/configure-pages@v5
