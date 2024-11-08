@@ -35,7 +35,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # Add steps here!!
-
+      - name: Generate QR Code
+        env:
+          PAGE_URL: "https://${{ github.repository_owner }}.github.io/${{ github.repository }}"
+        run: |
+          QR_URL="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$PAGE_URL"
+          sed -i "s|{{QR_CODE}}|$QR_URL|" index.html
       # End additional steps!!
       - name: Setup Pages
         uses: actions/configure-pages@v5

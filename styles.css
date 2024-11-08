@@ -1,8 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  /* background-color: #F6F6F5; */
-  background-color: green;
+  background-color: #F6F6F5;
 }
 
 html {
@@ -274,4 +273,17 @@ a {
 
 .job_post {
   font-size: large;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.qr-code {
+  width: 200px;
+  /* Adjust size as needed */
+  height: 200px;
 }
