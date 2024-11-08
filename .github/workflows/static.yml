@@ -39,6 +39,7 @@ jobs:
         env:
           PAGE_URL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
         run: |
+          echo https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$PAGE_URL
           sed -i'' "s|{{QR_CODE}}|https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$PAGE_URL|g" index.html
           cat index.html
       # End additional steps!!
